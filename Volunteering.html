@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteering</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <meta name="description" content="Explore the volunteering journey of Blessing Sithole, including youth leadership, peer education, and community service in Zimbabwe and the USA." />
+</head>
+<body class="blue-bg">
+
+  <!-- Navigation Bar -->
+  <nav>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul id="nav-links">
+      <li><a href="index.html">My Journey</a></li>
+      <li><a href="Licenses & Certifications.html">Licenses & Certifications</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Research.html">Research</a></li>
+      <li><a href="Leadership.html">Leadership</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li><a href="Experiences.html">Experiences</a></li>
+      <li><a href="Volunteering.html">Volunteering</a></li>
+      <li><a href="Extracurricular.html">Extracurricular</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <main>
+    <h2>Volunteering</h2>
+
+    <div class="activity">
+      <h3>Peer Advisor</h3>
+      <ul>
+        <li>Young People's Network in Sexual Reproductive Health (YPN-SRH)</li>
+        <li>Vice President – Chipinge District</li>
+        <li>Representative in youth governance – Manicaland</li>
+        <li>June 2018 – 2022</li>
+      </ul>
+    </div>
+
+    <div class="activity">
+      <h3>Peer Educator</h3>
+      <ul>
+        <li>Child Welfare and Protection Services</li>
+        <li>Chipinge High School</li>
+        <li>June 2017 – 2020</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2026 Blessing A Sithole</p>
+  </footer>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('show');
+  });
+
+  // Active nav highlighting
+  const currentPage = decodeURIComponent(
+    location.pathname.split("/").pop() || "index.html"
+  ).toLowerCase();
+
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkPage = decodeURIComponent(link.getAttribute("href")).toLowerCase();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

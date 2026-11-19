@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leadership</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    /* Page Title */
+    h2.page-title {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2rem;
+      color: #000;
+      border-bottom: 3px solid #530eca;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Leadership Grid */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 50px auto;
+      padding: 20px;
+    }
+
+    /* Leadership Card */
+    .activity {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .activity:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .activity h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #530eca;
+    }
+
+    .activity p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body class="blue-bg">
+
+  <!-- Navigation -->
+  <nav>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul id="nav-links">
+      <li><a href="index.html">My Journey</a></li>
+      <li><a href="Licenses & Certifications.html">Licenses & Certifications</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Research.html">Research</a></li>
+      <li><a href="Leadership.html">Leadership</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li><a href="Experiences.html">Experiences</a></li>
+      <li><a href="Volunteering.html">Volunteering</a></li>
+      <li><a href="Extracurricular.html">Extracurricular</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Leadership Content -->
+<main>
+  <h2 class="page-title">Leadership</h2>
+
+  <section class="leadership-grid">
+    <div class="activity">
+      <h3>NSLS President</h3>
+      <p>KSC, NH, USA<br>2025 – 2026</p>
+    </div>
+
+    <div class="activity">
+      <h3>KME President</h3>
+      <p>KSC, NH, USA<br>2025 – 2026</p>
+    </div>
+
+    <div class="activity">
+      <h3>Morris-August Honoree</h3>
+      <p>KSC, NH, USA<br>2024 – Present</p>
+    </div>
+
+    <div class="activity">
+      <h3>Global Club President</h3>
+      <p>KSC, NH, USA<br>2024 – 2025</p>
+    </div>
+
+    <div class="activity">
+      <h3>Class Rep '27</h3>
+      <p>KSC, NH, USA<br>2024 – 2025</p>
+    </div>
+
+    <div class="activity">
+      <h3>Junior Member of Parliament</h3>
+      <p>Chipinge Central Constituency<br>2018 – 2022</p>
+    </div>
+
+    <div class="activity">
+      <h3>Youth Rep – YPN-SRH</h3>
+      <p>Chipinge District<br>2018 – 2022</p>
+    </div>
+
+    <div class="activity">
+      <h3>VP – YPN-SRH</h3>
+      <p>Chipinge District<br>2020 – 2022</p>
+    </div>
+
+    <div class="activity">
+      <h3>School Head Prefect</h3>
+      <p>Chipinge High School<br>2018 – 2020</p>
+    </div>
+
+    <div class="activity">
+      <h3>School Head Prefect</h3>
+      <p>Mooiplaates Primary School<br>2014 – 2016</p>
+    </div>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Blessing A Sithole</p>
+  </footer>
+
+ <script>
+  // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('show');
+  });
+
+  // Active nav highlighting
+  const currentPage = decodeURIComponent(
+    location.pathname.split("/").pop() || "index.html"
+  ).toLowerCase();
+
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkPage = decodeURIComponent(link.getAttribute("href")).toLowerCase();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

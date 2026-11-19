@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <meta name="description" content="Discover the inspiring journey of Blessing Sithole, born in Chipinge, Zimbabwe, and now studying in the United States. Explore achievements, academic projects in mathematics and computer science, leadership roles, and efforts to uplift under-resourced communities through education and technology." />
+</head>
+<body class="blue-bg">
+
+</header>
+
+ <nav>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul id="nav-links">
+      <li><a href="index.html">My Journey</a></li>
+      <li><a href="Licenses & Certifications.html">Licenses & Certifications</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Leadership.html">Leadership</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li><a href="Experiences.html">Experiences</a></li>
+      <li><a href="Volunteering.html">Volunteering</a></li>
+      <li><a href="Extracurricular.html">Extracurricular</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <main>
+    <h2>Contact Form</h2>
+    <p style="margin-bottom: 1em;">
+  Thank you for visiting my portfolio! I'm always excited to connect with fellow students, researchers, mentors, and changemakers from around the world. 
+  Whether you have questions about my projects, want to collaborate, or simply want to say hello — please don’t hesitate to reach out. 
+  I value meaningful conversations that spark new ideas, empower communities, and push boundaries in education, technology, and leadership.
+</p>
+
+<p style="margin-bottom: 1em;">
+  Fill out the form below and I’ll get back to you as soon as possible. I look forward to hearing from you!
+</p>
+
+<p style="margin-bottom: 1em;">
+  Required fields are marked with an asterisk<span class="required"></span>
+</p>
+
+<form action="https://formspree.io/f/xvgrknvw" method="POST">
+  <!-- Required Fields -->
+  <label for="myName" class="required">Name:</label>
+  <input type="text" id="myName" name="Name" required />
+
+  <label for="myEmail" class="required">Email:</label>
+  <input type="email" id="myEmail" name="Email" required />
+  <!-- Optional Fields (no class needed) -->
+  <label for="myPhone">Phone:</label>
+  <input type="tel" id="myPhone" name="Phone" placeholder="e.g., (123) 456-7890" />
+
+
+  <label for="myComments" class="required">Comments:</label>
+  <textarea id="myComments" name="Message" rows="4" required></textarea>
+
+  
+  <label for="myReferral">Referred by?</label>
+  <input type="text" id="myReferral" name="Referral" list="referralOptions" placeholder="Select or type" />
+  <datalist id="referralOptions">
+    <option value="Friend">
+    <option value="Social Media">
+    <option value="Google Search">
+    <option value="Event">
+  </datalist>
+
+  <!-- Hidden spam trap and redirect -->
+  <input type="hidden" name="_next" value="https://addingtony.github.io/thank-you.html" />
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <input type="submit" value="Send Now" id="mySubmit" />
+</form>
+
+<p>Connect with me:</p>
+  <div class="social-links">
+    <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+  </div>
+  <a href="mailto:Blessing.Sithole@Keene.edu">Blessing.Sithole@Keene.edu</a><br />
+  <a href="mailto:addingtonybsithole@gmail.com">addingtonybsithole@gmail.com</a>
+    
+  </main>
+
+  <footer>
+  <p>&copy; 2026 Blessing A Sithole</p>
+</footer>
+
+
+
+  <script>
+  // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('show');
+  });
+
+  // Active nav highlighting
+  const currentPage = decodeURIComponent(
+    location.pathname.split("/").pop() || "index.html"
+  ).toLowerCase();
+
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkPage = decodeURIComponent(link.getAttribute("href")).toLowerCase();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
