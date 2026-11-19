@@ -1,216 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#748392">
+  <meta name="description" content="Blessing A. Sithole — Computer Science and Mathematics student at Keene State College exploring software engineering, machine learning, and AI.">
   <title>Blessing A. Sithole | Software Engineering Portfolio</title>
 
-  <meta name="description"
-    content="Explore the portfolio of Blessing A. Sithole, a Computer Science and Mathematics student at Keene State College interested in software engineering, machine learning, and AI." />
+  <meta property="og:title" content="Blessing A. Sithole | Portfolio">
+  <meta property="og:description" content="Explore Blessing Sithole's software engineering journey and work.">
+  <meta property="og:image" content="https://blessing-dev1.github.io/Profile.png">
+  <meta property="og:url" content="https://blessing-dev1.github.io/">
+  <meta property="og:type" content="website">
 
-  <meta property="og:title"
-    content="Blessing A. Sithole | Portfolio" />
-  <meta property="og:description"
-    content="Software engineering, AI, machine learning, projects, and professional experience." />
-  <meta property="og:image"
-    content="https://blessing-dev1.github.io/background.png" />
-  <meta property="og:url"
-    content="https://blessing-dev1.github.io/" />
-  <meta property="og:type" content="website" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet" />
-
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
 </head>
-
-<body class="home-page">
-
-  <!-- TOP NAVIGATION -->
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="index.html">BAS<span>.</span></a>
-
-      <div class="nav-links">
-        <a href="index.html" aria-current="page">Home</a>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="Blessing Sithole, home">BAS<span>.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="active" href="index.html" aria-current="page">Home</a>
         <a href="MyJourney.html">My Journey</a>
-        <a href="MyJourney.html">About Me</a>
-        <a href="#professional-profile">Skills</a>
+        <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">Projects</a>
         <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <!-- HOMEPAGE DASHBOARD -->
-  <div class="index-container">
-
-    <!-- LEFT: PROFILE -->
-    <aside class="sidebar profile-card">
-
-      <div class="profile-image-wrapper">
-        <img src="Profile.png"
-             alt="Professional portrait of Blessing A. Sithole"
-             class="profile-image" />
-      </div>
-
-      <h2 class="profile-name">Blessing A. Sithole</h2>
-
-      <p class="profile-role">
-        Aspiring Software Engineer
-        <span>AI & Machine Learning Enthusiast</span>
-      </p>
-
-      <div class="profile-divider"></div>
-
-      <h3 class="social-heading">Connect With Me</h3>
-
-      <div class="social-links" id="contact">
-
-        <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-          LinkedIn
-        </a>
-
-        <a href="https://github.com/Blessing-dev1"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" aria-hidden="true"></i>
-          GitHub
-        </a>
-
-        <a href="https://www.facebook.com/blessinga.sithole/"
-           target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook" aria-hidden="true"></i>
-          Facebook
-        </a>
-
-      </div>
-    </aside>
-
-    <!-- CENTER: HERO -->
-    <main class="main roots-bg">
-
-      <div class="hero-content">
-
-        <span class="hero-eyebrow">
-          SOFTWARE ENGINEERING • AI • INNOVATION
-        </span>
-
-        <h1>
-          Building Intelligent Software
-          <span>for Real-World Impact.</span>
-        </h1>
-
-        <p class="hero-description">
-          I'm Blessing Sithole, a Computer Science and
-          Mathematics student at Keene State College,
-          passionate about software engineering,
-          machine learning, and creating technology
-          that makes a meaningful difference.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#professional-profile" class="btn btn-primary">
-            <i class="fas fa-code" aria-hidden="true"></i>
-            Explore My Skills
-          </a>
-
-          <a href="MyJourney.html" class="btn btn-outline">
-            Discover My Journey
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SOFTWARE ENGINEERING PORTFOLIO</p>
+          <h1 id="intro-title">MEET <span>BLESSING</span> SITHOLE</h1>
+          <p class="intro-role">Software Engineering · AI & Machine Learning</p>
+          <p class="intro-description">
+            I'm a Computer Science and Mathematics student at Keene State College,
+            passionate about building useful software, solving real-world problems,
+            and exploring intelligent technologies.
+          </p>
+          <div class="intro-actions">
+            <a class="button button-primary" href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">Explore My Work <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="MyJourney.html">My Journey <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="intro-social" id="contact" aria-label="Connect with Blessing">
+            <span class="social-label">CONNECT</span>
+            <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
         </div>
-
-      </div>
+        <div class="intro-photo">
+          <img src="Profile.png" alt="Blessing A. Sithole in a suit and yellow tie" fetchpriority="high">
+          <div class="photo-accent" aria-hidden="true"></div>
+        </div>
+      </section>
     </main>
 
-    <!-- RIGHT: PROFESSIONAL SNAPSHOT -->
-    <aside class="info professional-card"
-           id="professional-profile">
-
-      <h2>Professional Snapshot</h2>
-
-      <div class="info-item">
-        <div class="info-heading">
-          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-          <h3>Education</h3>
-        </div>
-
-        <p>
-          B.S. Computer Science & Mathematics
-          <span>Keene State College</span>
-          <span>Expected May 2027</span>
-        </p>
-      </div>
-
-      <div class="info-item">
-        <div class="info-heading">
-          <i class="fas fa-code" aria-hidden="true"></i>
-          <h3>Technical Skills</h3>
-        </div>
-
-        <div class="skill-tags">
-          <span>Python</span>
-          <span>C++</span>
-          <span>SQL</span>
-          <span>Git</span>
-          <span>Data Analysis</span>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <div class="info-heading">
-          <i class="fas fa-brain" aria-hidden="true"></i>
-          <h3>Areas of Interest</h3>
-        </div>
-
-        <p>
-          Software Engineering, Machine Learning,
-          Applied AI, and Data Science
-        </p>
-      </div>
-
-      <div class="info-item">
-        <div class="info-heading">
-          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-          <h3>Location</h3>
-        </div>
-
-        <p>
-          Keene, New Hampshire, USA
-        </p>
-      </div>
-
-      <!-- Add resume link here when PDF is available -->
-      <!--
-      <a href="resume.pdf" class="resume-button" download>
-        <i class="fas fa-file-download"></i>
-        Download Resume
-      </a>
-      -->
-
-    </aside>
+    <footer class="site-footer">
+      <span>© <span id="year">2026</span> Blessing A. Sithole</span>
+      <span>Designed with purpose.</span>
+    </footer>
   </div>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>
-      &copy; <span id="current-year"></span>
-      Blessing A. Sithole. All Rights Reserved.
-    </p>
-  </footer>
-
-  <script>
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
-  </script>
-
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
