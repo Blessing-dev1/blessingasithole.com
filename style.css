@@ -89,11 +89,6 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--accent-color);
 }
-
-/* =========================
-   ACTIVE NAV LINK (LOCKED)
-   ========================= */
-
 /* Simple mobile navigation fix */
 @media (max-width: 768px) {
   nav {
@@ -122,3 +117,7 @@ nav ul li a:hover {
   }
 }
 
+
+/* =========================
+   ACTIVE NAV LINK (LOCKED)
+   ========================= */
