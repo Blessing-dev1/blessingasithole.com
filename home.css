@@ -1,4 +1,10 @@
-/* Blessing A. Sithole — minimalist portfolio homepage */
+
+/* ==========================================
+   BLESSING A. SITHOLE
+   MINIMALIST PORTFOLIO HOMEPAGE
+========================================== */
+
+/* Global Variables */
 :root {
   --accent: #4F91D9;
   --accent-dark: #347cbd;
@@ -7,318 +13,530 @@
   --ink: #172438;
   --muted: #526277;
   --white: #ffffff;
+
   --font-head: 'Montserrat', Arial, sans-serif;
   --font-body: 'Poppins', Arial, sans-serif;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   min-height: 100dvh;
-  background: linear-gradient(125deg, #245a8b 0%, #18466f 52%, #0f2f52 100%);
+
+  background: linear-gradient(
+    125deg,
+    #245a8b 0%,
+    #18466f 52%,
+    #0f2f52 100%
+  );
+
   color: var(--ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
-a { color: inherit; text-decoration: none; }
-a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   SITE CONTAINER
+========================================== */
+
 .site-shell {
   width: min(92%, 1320px);
   min-height: 100vh;
   min-height: 100dvh;
+
   margin-inline: auto;
+
   display: flex;
   flex-direction: column;
 }
 
-/* Navigation */
+/* ==========================================
+   NAVIGATION
+========================================== */
+
 .site-header {
   flex: 0 0 auto;
   min-height: 82px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 22px;
 }
+
 .site-logo {
   color: white;
   font: 800 1.85rem/1 var(--font-head);
-  letter-spacing: -.06em;
+  letter-spacing: -0.06em;
 }
-.site-logo span { color: #9bcdf9; }
-.site-nav { display: flex; flex-wrap: wrap; gap: 14px 30px; align-items: center; }
+
+.site-logo span {
+  color: #9bcdf9;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 30px;
+  align-items: center;
+}
+
 .site-nav a {
   color: #eef6ff;
-  font: 600 .76rem/1.5 var(--font-head);
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  transition: color .2s ease;
-}
-.site-nav a:hover, .site-nav a.active { color: #b9ddff; }
 
-/* Main split panel fills available vertical space */
-.site-main { flex: 1 0 auto; display: flex; align-items: center; }
+  /* Increased navigation font size */
+  font: 600 1rem/1.5 var(--font-head);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: #b9ddff;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.site-main {
+  flex: 1 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ==========================================
+   INTRODUCTION PANEL
+========================================== */
+
 .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   width: 100%;
-  min-height: clamp(580px, calc(100dvh - 150px), 800px);
+  min-height: clamp(
+    580px,
+    calc(100dvh - 150px),
+    800px
+  );
+
   background: var(--white);
-  box-shadow: 0 18px 55px rgba(4, 22, 43, .16);
+
+  box-shadow: 0 18px 55px rgba(
+    4, 22, 43, 0.16
+  );
+
   overflow: hidden;
 }
+
+/* Left Text Panel */
 .intro-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
   min-width: 0;
-  padding: clamp(32px, 4.6vw, 76px);
+
+  padding: clamp(
+    32px,
+    4.6vw,
+    76px
+  );
 }
+
+/* Small Intro Label */
 .eyebrow {
   display: flex;
   align-items: center;
   gap: 11px;
+
   margin: 0 0 22px;
+
   color: #3f75ad;
-  font: 700 .7rem/1.5 var(--font-head);
-  letter-spacing: .08em;
+
+  font: 700 0.7rem/1.5 var(--font-head);
+  letter-spacing: 0.08em;
 }
-.eyebrow-line { width: 25px; height: 2px; flex: 0 0 25px; background: var(--accent); }
+
+.eyebrow-line {
+  width: 25px;
+  height: 2px;
+  flex: 0 0 25px;
+
+  background: var(--accent);
+}
+
+/* Main Heading */
 .intro-copy h1 {
   margin: 0;
+
   color: var(--ink);
-  font: 800 clamp(2.1rem, 3.2vw, 3.55rem)/1.14 var(--font-head);
-  letter-spacing: -.045em;
+
+  font: 800 clamp(
+    2.1rem,
+    3.2vw,
+    3.55rem
+  ) / 1.14 var(--font-head);
+
+  letter-spacing: -0.045em;
 }
-.intro-copy h1 span { color: var(--accent); }
+
+.intro-copy h1 span {
+  color: var(--accent);
+}
+
+/* Professional Title */
 .intro-role {
   margin: 22px 0 12px;
+
   color: #224c71;
-  font-size: clamp(.92rem, 1.12vw, 1.03rem);
+
+  font-size: clamp(
+    0.92rem,
+    1.12vw,
+    1.03rem
+  );
+
   font-weight: 600;
   line-height: 1.6;
 }
+
+/* Introduction Paragraph */
 .intro-description {
   max-width: 490px;
+
   margin: 0;
+
   color: var(--muted);
-  font-size: clamp(.92rem, 1.08vw, .98rem);
+
+  font-size: clamp(
+    0.92rem,
+    1.08vw,
+    0.98rem
+  );
+
   line-height: 1.85;
 }
-.intro-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+  margin-top: 28px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
+
   min-height: 46px;
   padding: 12px 19px;
+
   border: 1.5px solid transparent;
   border-radius: 3px;
-  font: 600 .8rem/1.3 var(--font-head);
-  transition: transform .2s ease, background .2s ease, border-color .2s ease;
-}
-.button:hover { transform: translateY(-2px); }
-.button-primary { background: var(--accent); color: white; }
-.button-primary:hover { background: var(--accent-dark); }
-.button-outline { border-color: #8c9baa; background: white; color: var(--ink); }
-.button-outline:hover { border-color: var(--accent); background: #eef6ff; }
 
-/* Social section */
-.intro-social { width: 100%; margin-top: 34px; }
+  font: 600 0.8rem/1.3 var(--font-head);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--accent-dark);
+}
+
+.button-outline {
+  border-color: #8c9baa;
+  background: white;
+  color: var(--ink);
+}
+
+.button-outline:hover {
+  border-color: var(--accent);
+  background: #eef6ff;
+}
+
+/* ==========================================
+   CONNECT WITH ME
+========================================== */
+
+.intro-social {
+  width: 100%;
+  margin-top: 34px;
+}
+
 .intro-social h2 {
   margin: 0 0 12px;
+
   color: #24496c;
-  font: 700 .92rem/1.45 var(--font-head);
+
+  font: 700 0.92rem/1.45 var(--font-head);
 }
-.social-links { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 19px; }
+
+.social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px 19px;
+}
+
 .social-links a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: #315e84;
-  font-size: .85rem;
-  font-weight: 600;
-  transition: color .2s ease;
-}
-.social-links a:hover { color: var(--accent-dark); }
-.social-links i { color: var(--accent); font-size: 1.07rem; }
 
-/* Full-bleed portrait, no empty strip underneath */
-.intro-photo { position: relative; min-height: 100%; overflow: hidden; background: #e5ebf2; }
+  gap: 8px;
+
+  color: #315e84;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-dark);
+}
+
+.social-links i {
+  color: var(--accent);
+  font-size: 1.07rem;
+}
+
+/* ==========================================
+   PROFILE PHOTO
+========================================== */
+
+.intro-photo {
+  position: relative;
+  min-height: 100%;
+
+  overflow: hidden;
+  background: #e5ebf2;
+}
+
 .intro-photo img {
   position: absolute;
   inset: 0;
+
   display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center 22%;
 }
-.photo-accent { position: absolute; inset: 0 0 0 auto; width: 6px; background: var(--accent); }
+
+.photo-accent {
+  position: absolute;
+  inset: 0 0 0 auto;
+
+  width: 6px;
+  background: var(--accent);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 .site-footer {
   flex: 0 0 auto;
+
   display: flex;
   justify-content: center;
+
   gap: 6px;
+
   padding: 16px 0 19px;
+
   color: #e7f2fc;
-  font-size: .72rem;
+
+  /* Increased footer font size */
+  font-size: 1rem;
+  line-height: 1.6;
+
   text-align: center;
 }
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+========================================== */
+
 @media (max-width: 980px) {
-  .intro-copy { padding: 35px; }
-  .intro { min-height: 630px; }
+  .intro-copy {
+    padding: 35px;
+  }
+
+  .intro {
+    min-height: 630px;
+  }
 }
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
 @media (max-width: 720px) {
-  .site-shell { width: 94%; }
-  .site-header { min-height: auto; padding: 22px 0; flex-wrap: wrap; gap: 15px; }
-  .site-logo { font-size: 1.65rem; }
-  .site-nav { gap: 10px 17px; }
-  .site-nav a { font-size: .7rem; }
-  .site-main { display: block; }
-  .intro { grid-template-columns: 1fr; min-height: 0; }
-  .intro-photo { grid-row: 1; height: clamp(300px, 58vw, 460px); min-height: 0; }
-  .intro-copy { grid-row: 2; padding: 35px 28px 42px; }
-  .intro-copy h1 { font-size: clamp(2rem, 7vw, 3rem); }
-  .intro-social { margin-top: 29px; }
-  .site-footer { flex-wrap: wrap; padding-bottom: 24px; }
-}
-@media (max-width: 420px) {
-  .intro-copy { padding: 30px 22px 36px; }
-  .intro-actions { flex-direction: column; align-items: stretch; width: 100%; }
-  .button { width: 100%; }
-  .social-links { gap: 12px 16px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; }
-}
 
-/* =========================================
-   HOMEPAGE TYPOGRAPHY IMPROVEMENTS
-========================================= */
-
-/* Navigation links */
-.site-nav a {
-  font-size: 0.95rem;
-}
-
-/* Small label above heading */
-.eyebrow {
-  font-size: 0.85rem;
-}
-
-/* Main heading */
-.intro-copy h1 {
-  font-size: clamp(2.6rem, 4vw, 4rem);
-  line-height: 1.15;
-}
-
-/* Professional title */
-.intro-role {
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-/* Introduction paragraph */
-.intro-description {
-  font-size: 1.08rem;
-  line-height: 1.85;
-}
-
-/* Buttons */
-.intro-actions .button {
-  font-size: 0.95rem;
-  padding: 14px 24px;
-  min-height: 50px;
-}
-
-/* Connect With Me heading */
-.intro-socials h3,
-.social-heading {
-  font-size: 1.05rem;
-}
-
-/* Social media links */
-.intro-socials a,
-.social-links a {
-  font-size: 1rem;
-}
-
-/* Footer */
-.site-footer p {
-  font-size: 0.9rem;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .intro-copy h1 {
-    font-size: clamp(2.3rem, 4vw, 3.3rem);
+  .site-shell {
+    width: 94%;
   }
 
-  .intro-description {
-    font-size: 1rem;
-  }
-}
+  /* Mobile Navigation */
+  .site-header {
+    min-height: auto;
+    padding: 22px 0;
 
-/* Mobile */
-@media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .site-logo {
+    font-size: 1.65rem;
+  }
+
+  .site-nav {
+    gap: 10px 17px;
+  }
+
   .site-nav a {
-    font-size: 0.85rem;
-  }
-
-  .intro-copy h1 {
-    font-size: clamp(2.1rem, 7vw, 3rem);
-  }
-
-  .intro-role {
-    font-size: 1.05rem;
-  }
-
-  .intro-description {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-
-  .intro-actions .button {
-    font-size: 0.9rem;
-  }
-
-  .intro-socials a,
-  .social-links a {
     font-size: 0.95rem;
   }
-}
 
-/* ===================================
-   NAVIGATION & FOOTER FONT SIZES
-=================================== */
-
-/* Navigation links */
-.site-nav a {
-  font-size: 1rem; /* 16px */
-  font-weight: 600;
-}
-
-/* Footer text */
-.site-footer p {
-  font-size: 1rem; /* 16px */
-  line-height: 1.6;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .site-nav a {
-    font-size: 0.95rem; /* 15px */
+  /* Mobile Content */
+  .site-main {
+    display: block;
   }
 
-  .site-footer p {
-    font-size: 0.95rem; /* 15px */
+  .intro {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  /* Portrait First */
+  .intro-photo {
+    grid-row: 1;
+
+    height: clamp(
+      300px,
+      58vw,
+      460px
+    );
+
+    min-height: 0;
+  }
+
+  /* Introduction Second */
+  .intro-copy {
+    grid-row: 2;
+    padding: 35px 28px 42px;
+  }
+
+  .intro-copy h1 {
+    font-size: clamp(
+      2rem,
+      7vw,
+      3rem
+    );
+  }
+
+  .intro-social {
+    margin-top: 29px;
+  }
+
+  /* Mobile Footer */
+  .site-footer {
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+    font-size: 1rem;
   }
 }
 
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 420px) {
+
+  .intro-copy {
+    padding: 30px 22px 36px;
+  }
+
+  .intro-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .social-links {
+    gap: 12px 16px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
