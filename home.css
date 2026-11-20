@@ -734,3 +734,32 @@ a:focus-visible {
   color: var(--accent);
   font-size: 1.22rem;
 }
+/* ==========================================
+   NAVIGATION (PUSHED DOWN TOWARD HERO CARD)
+========================================== */
+
+.site-header {
+  flex: 0 0 auto;
+  min-height: 82px;
+
+  /* Adds blank space above the logo & nav, pulling them closer to .intro */
+  padding-top: clamp(32px, 6vh, 84px);
+  padding-bottom: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+}
+
+/* ==========================================
+   MAIN CONTENT (CLOSE GAP TO HEADER)
+========================================== */
+
+.site-main {
+  flex: 1 0 auto;
+
+  /* Aligns .intro right beneath .site-header instead of vertically centering with extra gap */
+  display: flex;
+  align-items: flex-start;
+}
