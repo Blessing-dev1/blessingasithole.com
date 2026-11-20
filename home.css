@@ -198,3 +198,99 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* =========================================
+   HOMEPAGE TYPOGRAPHY IMPROVEMENTS
+========================================= */
+
+/* Navigation links */
+.site-nav a {
+  font-size: 0.95rem;
+}
+
+/* Small label above heading */
+.eyebrow {
+  font-size: 0.85rem;
+}
+
+/* Main heading */
+.intro-copy h1 {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  line-height: 1.15;
+}
+
+/* Professional title */
+.intro-role {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Introduction paragraph */
+.intro-description {
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+/* Buttons */
+.intro-actions .button {
+  font-size: 0.95rem;
+  padding: 14px 24px;
+  min-height: 50px;
+}
+
+/* Connect With Me heading */
+.intro-socials h3,
+.social-heading {
+  font-size: 1.05rem;
+}
+
+/* Social media links */
+.intro-socials a,
+.social-links a {
+  font-size: 1rem;
+}
+
+/* Footer */
+.site-footer p {
+  font-size: 0.9rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .intro-copy h1 {
+    font-size: clamp(2.3rem, 4vw, 3.3rem);
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .site-nav a {
+    font-size: 0.85rem;
+  }
+
+  .intro-copy h1 {
+    font-size: clamp(2.1rem, 7vw, 3rem);
+  }
+
+  .intro-role {
+    font-size: 1.05rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .intro-actions .button {
+    font-size: 0.9rem;
+  }
+
+  .intro-socials a,
+  .social-links a {
+    font-size: 0.95rem;
+  }
+}
