@@ -763,3 +763,85 @@ a:focus-visible {
   display: flex;
   align-items: flex-start;
 }
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 720px) {
+  .site-shell {
+    width: 94%;
+  }
+
+  /* Mobile Navigation: override top push so phones stay compact */
+  .site-header {
+    min-height: auto;
+    padding: 18px 0;
+
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .site-logo {
+    font-size: 1.65rem;
+  }
+
+  .site-nav {
+    gap: 8px 16px;
+  }
+
+  .site-nav a {
+    font-size: 0.95rem;
+  }
+
+  /* Mobile Content */
+  .site-main {
+    display: block;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  /* Portrait First */
+  .intro-photo {
+    grid-row: 1;
+    height: clamp(280px, 56vw, 420px);
+    min-height: 0;
+  }
+
+  /* Introduction Second */
+  .intro-copy {
+    grid-row: 2;
+    padding: 28px 22px 34px;
+  }
+
+  .intro-copy h1 {
+    font-size: clamp(2rem, 7vw, 2.85rem);
+  }
+
+  .intro-role {
+    margin: 18px 0 10px;
+    font-size: 1.05rem;
+  }
+
+  .intro-description {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .intro-actions {
+    margin-top: 22px;
+  }
+
+  .intro-social {
+    margin-top: 24px;
+  }
+
+  /* Mobile Footer */
+  .site-footer {
+    flex-wrap: wrap;
+    padding: 16px 0 22px;
+    font-size: 0.95rem;
+  }
+}
