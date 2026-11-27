@@ -3,69 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#18466f">
+  <meta name="theme-color" content="#102c49">
   <meta name="description" content="Blessing A. Sithole — Computer Science and Mathematics student at Keene State College exploring software engineering, machine learning, and AI.">
   <title>Blessing A. Sithole | Software Engineering Portfolio</title>
-
   <meta property="og:title" content="Blessing A. Sithole | Portfolio">
   <meta property="og:description" content="Explore Blessing Sithole's software engineering journey and work.">
   <meta property="og:image" content="https://blessing-dev1.github.io/Profile.png">
   <meta property="og:url" content="https://blessing-dev1.github.io/">
   <meta property="og:type" content="website">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="home.css?v=3">
+  <link rel="stylesheet" href="home.css?v=4">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell">
     <header class="site-header">
       <a class="site-logo" href="index.html" aria-label="Blessing Sithole, home">Blessing<span>.</span></a>
       <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="MyJourney.html">My Journey</a>
+        <a href="#interests">Interests</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
-
-    <main class="site-main">
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="intro-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> SOFTWARE ENGINEERING PORTFOLIO</p>
-          <h1 id="intro-title">MEET <span>BLESSING</span> SITHOLE</h1>
-          <p class="intro-role">Software Engineering · AI & Machine Learning</p>
-          <p class="intro-description">
-            I'm a Computer Science and Mathematics student at Keene State College,
-            passionate about building useful software, solving real-world problems,
-            and exploring intelligent technologies.
-          </p>
-<div class="intro-actions">
-  <a href="MyJourney.html" class="button button-primary">
-    My Journey <span aria-hidden="true">→</span>
-  </a>
-</div>      
-
-          <section class="intro-social" id="contact" aria-labelledby="connect-heading">
-            <h2 id="connect-heading">Connect With Me</h2>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
-              <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
-              <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" aria-hidden="true"></i>Facebook</a>
-            </div>
-          </section>
+    <main id="main">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Welcome to my portfolio</p>
+          <h1 id="intro-title">Hi, I'm<br> Blessing <span>Sithole.</span></h1>
+          <p class="hero-role">Building software. Solving real-world problems.</p>
+          <p class="hero-description">I'm a Computer Science and Mathematics student at Keene State College, passionate about building useful software, exploring intelligent technologies, and creating meaningful solutions.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="MyJourney.html">Explore My Journey <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="button button-secondary" href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
         </div>
-        <div class="intro-photo">
+        <figure class="hero-portrait">
           <img src="Profile.png" alt="Blessing A. Sithole in a suit and yellow tie" fetchpriority="high">
-          <div class="photo-accent" aria-hidden="true"></div>
+          <figcaption><i class="fa-solid fa-globe" aria-hidden="true"></i> Zimbabwe <span aria-hidden="true">·</span> United States</figcaption>
+        </figure>
+      </section>
+      <section class="profile-grid" aria-label="At a glance">
+        <article class="profile-card"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><div><p class="card-label">Education</p><h2>Computer Science &amp; Mathematics</h2><p>Keene State College</p></div></article>
+        <article class="profile-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><div><p class="card-label">Experience</p><h2>Quality Process &amp; Data Analysis</h2><p>Internship experience</p></div></article>
+        <article class="profile-card"><i class="fa-solid fa-earth-africa" aria-hidden="true"></i><div><p class="card-label">My background</p><h2>From Zimbabwe to the USA</h2><p>A journey of learning and growth</p></div></article>
+      </section>
+      <section class="interests" id="interests" aria-labelledby="interests-title">
+        <p class="eyebrow">What drives me</p>
+        <h2 id="interests-title">Areas of Interest</h2>
+        <div class="interests-grid">
+          <article><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Software Engineering</h3><p>Developing useful, reliable software that addresses real-world needs.</p></article>
+          <article><i class="fa-solid fa-brain" aria-hidden="true"></i><h3>AI &amp; Machine Learning</h3><p>Exploring intelligent systems and how they can help solve complex problems.</p></article>
+          <article><i class="fa-solid fa-chart-line" aria-hidden="true"></i><h3>Data &amp; Mathematics</h3><p>Applying mathematical reasoning and analytical thinking to computational challenges.</p></article>
+        </div>
+      </section>
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div><h2 id="contact-title">Let's connect.</h2><p>Find me online and follow my journey.</p></div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+          <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <span>© <span id="year">2026</span> Blessing A. Sithole</span>
-      <span>Designed with purpose.</span>
-    </footer>
+    <footer class="site-footer"><span>© <span id="year">2026</span> Blessing A. Sithole</span><span>Designed with purpose.</span></footer>
   </div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
